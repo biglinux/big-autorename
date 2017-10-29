@@ -1,0 +1,11 @@
+Package: big-autorename
+Version: 1.0.0-1big6
+Depends:
+Architecture: all
+Maintainer: Bruno Goncalves <biglinux.com.br>
+Section: admin
+Priority: optional
+Installed-Size:48
+Description: Improve name of apps in Brazilian Portuguese
+
+

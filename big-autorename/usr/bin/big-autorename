@@ -1,0 +1,102 @@
+#!/bin/sh
+
+sed -i 's|Name\[pt_BR\]=Brasero$|Name[pt_BR]=Gravar CD/DVD (Brasero)|g' /usr/share/applications/brasero.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=GParted$|Name[pt_BR]=Particionar ou Formatar (Gparted)|g' /usr/share/applications/gparted.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=Cheese$|Name[pt_BR]=Webcam (Cheese)|g' /usr/share/applications/org.gnome.Cheese.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=Arquivos$|Name[pt_BR]=Meus Arquivos (Nemo)|g' /usr/share/applications/nemo.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=Evolution$|Name[pt_BR]=E-mail (Evolution)|g' /usr/share/applications/evolution.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=Firefox$|Name[pt_BR]=Navegue na Internet (Firefox)|g' /usr/share/applications/firefox.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=Instalar Deepin$|Name[pt_BR]=Instalar no HD|g' /usr/share/applications/deepin-installer-reborn.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=Editor de texto$|Name[pt_BR]=Editor de Textos Simples (Xed)|g' /usr/share/applications/xed.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=SMPlayer$|Name[pt_BR]=Reproduzir Vídeos (SMplayer)|g' /usr/share/applications/smplayer.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=Shotwell$|Name[pt_BR]=Minhas Fotos (Shotwell)|g' /usr/share/applications/shotwell.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=Deepin Boot Maker$|Name[pt_BR]=Gravar Pendrive Bootável (Boot Maker)|g' /usr/share/applications/deepin-boot-maker.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=Deepin Terminal$|Name[pt_BR]=Terminal|g' /usr/share/applications/deepin-terminal.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=Clementine$|Name[pt_BR]=Reproduzir Áudio (Clementine)|g' /usr/share/applications/clementine.desktop 2> /dev/null
+sed -i 's|Name\[sr@latin\]=Klementina$|Name[pt_BR]=Reproduzir Áudio (Clementine)|g' /usr/share/applications/clementine.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=qBittorrent$|Name[pt_BR]=Download de Torrent e Magnet (qBittorrent)|g' /usr/share/applications/qBittorrent.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=Programa de manipulação de imagem do GNU$|Name[pt_BR]=Editor de Imagens (GIMP)|g' /usr/share/applications/gimp.desktop 2> /dev/null
+
+sed -i 's|Name\[pt_BR\]=Pesquisar por arquivos...$|Name[pt_BR]=Pesquisa por Arquivos Completa (Gnome-Search-Tool)|g' /usr/share/applications/gnome-search-tool.desktop 2> /dev/null
+
+sed -i 's|Utility;|Game;|g' /usr/share/applications/PlayOnLinux.desktop 2> /dev/null
+
+
+if [ "$(grep 'pt_BR' /usr/share/applications/fsearch.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '3a\' -e 'Name[pt_BR]=Pesquisa por Arquivos Rápida (FSearch)'  /usr/share/applications/fsearch.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'pt_BR' /usr/share/applications/com.github.babluboy.bookworm.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '3a\' -e 'Name[pt_BR]=Meus Livros (Bookworm)'  /usr/share/applications/com.github.babluboy.bookworm.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'pt_BR' /usr/share/applications/gscan2pdf.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '3a\' -e 'Name[pt_BR]=Digitalizar Documentos (Gscan2pdf)'  /usr/share/applications/gscan2pdf.desktop 2> /dev/null
+fi
+
+#if [ "$(grep 'pt_BR' /usr/share/applications/calibre-gui.desktop 2> /dev/null)" = "" ]; then
+#    sed -i -e '3a\' -e 'Name[pt_BR]=Meus Livros Virtuais (Calibre)'  /usr/share/applications/calibre-gui.desktop 2> /dev/null
+#fi
+
+if [ "$(grep 'pt_BR' /usr/share/applications/openjdk-8-policytool.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '3a\' -e 'Name[pt_BR]=Regras de segurança do Java (Openjdk)'  /usr/share/applications/openjdk-8-policytool.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'Name[pt_BR]=Planilhas (Calc)' /usr/share/applications/libreoffice-calc.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '30a\' -e 'Name[pt_BR]=Planilhas (Calc)'  /usr/share/applications/libreoffice-calc.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'Name[pt_BR]=Desenhos (Draw)' /usr/share/applications/libreoffice-draw.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '30a\' -e 'Name[pt_BR]=Desenhos (Draw)'  /usr/share/applications/libreoffice-draw.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'Name[pt_BR]=Apresentações (Impress)' /usr/share/applications/libreoffice-impress.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '30a\' -e 'Name[pt_BR]=Apresentações (Impress)'  /usr/share/applications/libreoffice-impress.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'Name[pt_BR]=Editor de Fórmulas (Math)' /usr/share/applications/libreoffice-math.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '30a\' -e 'Name[pt_BR]=Editor de Fórmulas (Math)'  /usr/share/applications/libreoffice-math.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'Name[pt_BR]=Editor de Textos (Writer)' /usr/share/applications/libreoffice-writer.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '30a\' -e 'Name[pt_BR]=Editor de Textos (Writer)'  /usr/share/applications/libreoffice-writer.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'Name[pt_BR]=Banco de Dados (Base)' /usr/share/applications/libreoffice-base.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '30a\' -e 'Name[pt_BR]=Banco de Dados (Base)'  /usr/share/applications/libreoffice-base.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'pt_BR' /usr/share/applications/lrfviewer.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '3a\' -e 'Name[pt_BR]=Leitor de LRF'  /usr/share/applications/lrfviewer.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'pt_BR' /usr/share/applications/itweb-settings.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '3a\' -e 'Name[pt_BR]=Configurações do Java IcedTea'  /usr/share/applications/itweb-settings.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'pt_BR' /usr/share/applications/ebook-viewer.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '3a\' -e 'Name[pt_BR]=Livros Digitais (Ebooks)'  /usr/share/applications/ebook-viewer.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'pt_BR' /usr/share/applications/deepin-appstore.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '3a\' -e 'Name[pt_BR]=Loja de Aplicativos'  /usr/share/applications/deepin-appstore.desktop 2> /dev/null
+fi
+
+if [ "$(grep 'pt_BR' /usr/share/applications/deepin-voice-recorder.desktop 2> /dev/null)" = "" ]; then
+    sed -i -e '3a\' -e 'Name[pt_BR]=Gravador de Áudio'  /usr/share/applications/deepin-voice-recorder.desktop 2> /dev/null
+fi
+

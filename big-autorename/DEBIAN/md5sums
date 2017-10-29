@@ -1,0 +1,4 @@
+f0b373896129609d497d1872488c9130  DEBIAN/control
+d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
+180b3fb00438ed9458251e5f1dad2d1a  usr/bin/big-autorename
+b16d0628a31daef8cf6635389af0f529  etc/apt/apt.conf.d/90bigrename
