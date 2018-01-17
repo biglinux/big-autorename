@@ -24,8 +24,8 @@ sed -i 's|Name\[pt_BR\]=Deepin Boot Maker$|Name[pt_BR]=Gravar Pendrive Bootável
 
 sed -i 's|Name\[pt_BR\]=Deepin Terminal$|Name[pt_BR]=Terminal|g' /usr/share/applications/deepin-terminal.desktop 2> /dev/null
 
-sed -i 's|Name\[pt_BR\]=Clementine$|Name[pt_BR]=Reproduzir Áudio (Clementine)|g' /usr/share/applications/clementine.desktop 2> /dev/null
-sed -i 's|Name\[sr@latin\]=Klementina$|Name[pt_BR]=Reproduzir Áudio (Clementine)|g' /usr/share/applications/clementine.desktop 2> /dev/null
+#sed -i 's|Name\[pt_BR\]=Clementine$|Name[pt_BR]=Reproduzir Áudio (Clementine)|g' /usr/share/applications/clementine.desktop 2> /dev/null
+sed -i 's|Name\[sr@latin\]=Klementina$|Name[pt_BR]=Reproduzir Áudio (Clementine)|g;s|Name\[pt_BR\]=Clementine$|Name[pt_BR]=Reproduzir Áudio (Clementine)|g' /usr/share/applications/clementine.desktop 2> /dev/null
 
 sed -i 's|Name\[pt_BR\]=qBittorrent$|Name[pt_BR]=Download de Torrent e Magnet (qBittorrent)|g' /usr/share/applications/qBittorrent.desktop 2> /dev/null
 
@@ -100,3 +100,4 @@ if [ "$(grep 'pt_BR' /usr/share/applications/deepin-voice-recorder.desktop 2> /d
     sed -i -e '3a\' -e 'Name[pt_BR]=Gravador de Áudio'  /usr/share/applications/deepin-voice-recorder.desktop 2> /dev/null
 fi
 
+exit 0
